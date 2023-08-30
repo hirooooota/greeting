@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/comments/{morning}', function () {
-    return view('/view/')
-})
+Route::get('comments/{time}', [MessageController::class, 'time']);
+Route::get('comments/freeword/{word}', [MessageController::class, 'word']);
