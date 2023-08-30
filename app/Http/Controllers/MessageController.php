@@ -13,16 +13,12 @@ class MessageController extends Controller
         switch ($time) {
             case 'morning':
                 return view('message.morning');
-                break;
             case 'afternoon':
                 return view('message.afternoon');
-                break;
             case 'evening':
                 return view('message.evening');
-                break;
             case 'night':
                 return view('message.night');
-                break;
             case 'random':
                 $randoms = array("おはよう", "こんにちは", "こんばんは", "おやすみ");
                 return view('message.random', ['random' => $randoms[array_rand($randoms, 1)]]);
